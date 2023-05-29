@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  db:
+    container_name: hacker_rank_nysql
+    image: mysql:oracle
+    ports:
+      - "9306:3306"
+    volumes:
+      - ./.db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=hacker_rank
+      - MYSQL_DATABASE=hacker_rank
